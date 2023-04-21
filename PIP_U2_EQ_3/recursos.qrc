@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="Comidas">
+    <file>chips.png</file>
+    <file>coca.png</file>
+    <file>epura.png</file>
+    <file>jugo.png</file>
+    <file>nivea.png</file>
+    <file>P_01.py</file>
+    <file>panditas.png</file>
+    <file>powerade.png</file>
+    <file>snickers.png</file>
+    <file>takis.png</file>
+    <file>vaporub.png</file>
+  </qresource>
+</RCC>
