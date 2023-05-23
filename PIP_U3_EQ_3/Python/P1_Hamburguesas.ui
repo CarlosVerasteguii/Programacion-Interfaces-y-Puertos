@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>345</width>
+    <height>696</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget {
+    background-color: #E6F3FF;
+}
+
+
+QStatusBar {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+QMenuBar {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+QMenuBar::item {
+    padding: 5px 10px;
+}
+
+QMenuBar::item:selected {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+QMenu {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+QMenu::item {
+    padding: 5px 20px;
+}
+
+QMenu::item:selected {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:hover {
+    background-color: #F0F0F0;
+}
+
+QLineEdit:focus {
+    background-color: #FFFFCC;
+}
+
+QLabel {
+    font-family: &quot;Times New Roman&quot;, serif;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+#btn_agregar {
+    background-color: #007bff;
+    color: #fff;
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+#btn_registrar:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="cb_tipo_burguesa">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>90</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+}
+
+QComboBox:hover {
+    background-color: #F0F0F0;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #CCCCCC;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #E6E6E6;
+}
+
+QComboBox::down-arrow {
+    image: url(path/to/your/arrow-image.png);
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox::down-arrow:hover {
+    image: url(path/to/your/hovered-arrow-image.png);
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_cantidad">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>160</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_agregar">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>230</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Agregar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>350</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>H. Triples:</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>380</y>
+      <width>271</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Forma de Pago</string>
+    </property>
+    <widget class="QRadioButton" name="rb_efectivo">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton#rb_credito,
+QRadioButton#rb_efectivo {
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 14px;
+}
+
+QRadioButton#rb_credito::indicator,
+QRadioButton#rb_efectivo::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QRadioButton#rb_credito::indicator::unchecked,
+QRadioButton#rb_efectivo::indicator::unchecked {
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+}
+
+QRadioButton#rb_credito::indicator::unchecked:hover,
+QRadioButton#rb_efectivo::indicator::unchecked:hover {
+    border-color: #007bff;
+}
+
+QRadioButton#rb_credito::indicator::checked,
+QRadioButton#rb_efectivo::indicator::checked {
+    border: 1px solid #007bff;
+    background-color: #007bff;
+}
+
+QRadioButton#rb_credito::indicator::checked:hover,
+QRadioButton#rb_efectivo::indicator::checked:hover {
+    border-color: #0056b3;
+}
+
+QRadioButton#rb_credito::indicator:checked:disabled,
+QRadioButton#rb_efectivo::indicator:checked:disabled {
+    border: 1px solid #CCCCCC;
+    background-color: #CCCCCC;
+}
+
+QRadioButton#rb_credito::indicator:disabled,
+QRadioButton#rb_efectivo::indicator:disabled {
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Efectivo / Debito</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rb_credito">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>70</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton#rb_credito,
+QRadioButton#rb_efectivo {
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 14px;
+}
+
+QRadioButton#rb_credito::indicator,
+QRadioButton#rb_efectivo::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QRadioButton#rb_credito::indicator::unchecked,
+QRadioButton#rb_efectivo::indicator::unchecked {
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+}
+
+QRadioButton#rb_credito::indicator::unchecked:hover,
+QRadioButton#rb_efectivo::indicator::unchecked:hover {
+    border-color: #007bff;
+}
+
+QRadioButton#rb_credito::indicator::checked,
+QRadioButton#rb_efectivo::indicator::checked {
+    border: 1px solid #007bff;
+    background-color: #007bff;
+}
+
+QRadioButton#rb_credito::indicator::checked:hover,
+QRadioButton#rb_efectivo::indicator::checked:hover {
+    border-color: #0056b3;
+}
+
+QRadioButton#rb_credito::indicator:checked:disabled,
+QRadioButton#rb_efectivo::indicator:checked:disabled {
+    border: 1px solid #CCCCCC;
+    background-color: #CCCCCC;
+}
+
+QRadioButton#rb_credito::indicator:disabled,
+QRadioButton#rb_efectivo::indicator:disabled {
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+}
+</string>
+     </property>
+     <property name="text">
+      <string> Tarjeta de Credito</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>330</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>H. Dobles</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>310</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>H. Sencillas</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>50</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tipo de Hamburguesa</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>160</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cantidad</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txt_cantidad_sencillas">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>310</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txt_cantidad_dobles">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>330</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txt_cantidad_triples">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>350</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>510</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IMPORTE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txt_importe">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>560</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0.0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dollar_label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>560</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#dollar_label {
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+QLabel#dollar_label::before {
+    content: &quot;$&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>$</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>345</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
